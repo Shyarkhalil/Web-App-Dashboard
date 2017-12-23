@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web App Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.js"></script>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro|Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="css/app.css">
+  </head>
+  <body>
+    <header>
+      <div class="notification">
+         <span class="counter">3</span>
+      </div>
+      <ul class="nav">
+        <li class="my-app">
+          <h1 class="lighter">My<span class="darker">App&trade;</span></h1>
+        </li>
+
+        <li class="myName">
+          <h2>Shyar Khalil</h2>
+        </li>
+        <li class="myImg">
+           <img class="profImg" src="img/myimg.png" alt="virtual reality image">
+        </li>
+
+        <li class="bell">
+          <img src="icons/icon-bell.svg" alt="Bell">
+        </li>
+      </ul>
+
+
+      <ul class="notification-menu">
+        <li class="first-notification menu">
+          <div class="notification-container">
+          </div>
+          <i class="ion-checkmark-round"></i>
+          <span class="notifi-title">Ciwan followed you on Facebook</span>
+          <span class="close-notifi check-close">&#10006;</span>
+        </li>
+        <li class="second-notification menu">
+          <i class="ion-android-favorite-outline"></i>
+          <span class="notifi-title">Kawa liked your profile</span>
+          <span class="close-notifi favorite-close">&#10006;</span>
+        </li>
+        <li  class="third-notification menu">
+          <i class="ion-plus-round"></i>
+          <span class="notifi-title">Azad added you to his account</span>
+          <span class="close-notifi plus-close">&#10006;</span>
+        </li>
+      </ul>
+
+    </header>
+
+      <div class="success_container">
+
+       <div class="success_message">
+        <span class="close-success">&#10006;</span>
+        <span class="like-sign">&#10004;</span>
+        <span class="success_title">Congrats!</span>
+       </div>
+      </div>
+
+      <div class="user_error_container">
+
+       <div class="user_error_message">
+         <span class="close-error">&#10006;</span>
+         <span class="error-sign">&#9888;</span>
+       </div>
+      </div>
+
+      <div class="message_error_container">
+
+       <div class="message_error">
+         <span class="close-error message_close">&#10006;</span>
+         <span class="error-sign">&#9888;</span>
+         <p class="error_title">Oops! You forgot send message</p>
+       </div>
+       </div>
+
+    <!-- Navigation menu -->
+    <div class="nav-buttons">
+      <div class="dash-icon">
+        <a href="#first"><img src="icons/icon-dashboard.svg" alt="Dashboard"></a>
+      </div>
+      <div class="mem-icn">
+        <a href="#second"><img src="icons/icon-members.svg" alt="Members"></a>
+      </div>
+      <div class="visits">
+        <a href="#third"><img src="icons/icon-visits.svg" alt="Visits"></a>
+      </div>
+      <div class="settings">
+        <a href="#fourth"><img src="icons/icon-settings.svg" alt="Settings"></a>
+      </div>
+    </div>
+
+    <!-- main div -->
+      <div class="main-div" id="first">
+      <div class="pri-container">
+        <div class="dashboard">
+         <h1>Dashboard</h1>
+        </div>
+         <div class="search">
+           <form>
+            <input type="search" id="search" name="user_search" placeholder="Search...">
+         </form>
+         </div>
+      </div>
+
+      <div class="alert">
+       <p><strong>Alert!</strong> you have one notification!<span class="alertButton">&#10006;</span></p>
+      </div>
+
+      <div class="trafic_buttons">
+        <div class="traf-title">
+          <h3>TRAFFIC</h3>
+        </div>
+
+         <ul class="traffic">
+           <li class="btn-hourly"><span>Hourly</span></li>
+           <li class="btn-daily"><span>Daily</span></li>
+           <li class="btn-weekly"><span>Weekly</span></li>
+           <li class="btn-monthly"><span>Monthly</span></li>
+         </ul>
+      </div>
+
+
+
+      <div class="traffic-canvas">
+        <div class="canvas">
+         <canvas id="hourly"></canvas>
+        </div>
+        <div class="canvas">
+         <canvas id="daily"></canvas>
+        </div>
+        <div class="canvas">
+         <canvas id="weekly"></canvas>
+        </div>
+        <div class="canvas">
+         <canvas id="monthly"></canvas>
+        </div>
+      </div>
+      <div class="daily-mobile-traffic" id="third">
+        <div class="daily-canvas">
+          <h3>Daily Traffic</h3>
+         <canvas id="bar-daily"></canvas>
+        </div>
+
+        <div class="mobile-canvas">
+          <h3>MOBILE USERS</h3>
+          <canvas id="mobile-user"></canvas>
+       </div>
+      </div>
+
+<!-- Social Media section -->
+
+     <h3 class="social_title">SOCIAL STATS</h3>
+     <div class="social-stats">
+
+
+       <div class="icn-social">
+         <div class="img-social">
+          <img src="icons/icon-twitter.svg" alt="Twitter">
+         </div>
+        <div class="div-social">
+         <h4>Twitter</h4>
+         <span>10,345</span>
+        </div>
+       </div>
+
+       <div class="icn-social">
+         <div class="img-social">
+          <img src="icons/icon-facebook.svg" alt="Facebook">
+         </div>
+        <div class="div-social">
+         <h4>Facebook</h4>
+         <span>8,739</span>
+        </div>
+       </div>
+
+       <div class="icn-social">
+         <div class="img-social">
+          <img src="icons/icon-google-plus.svg" alt="Google">
+         </div>
+        <div class="div-social">
+         <h4>Google+</h4>
+         <span id="second">2,530</span>
+        </div>
+       </div>
+    </div>
+<!-- Members section -->
+<div class="members">
+
+<!-- New members -->
+  <div class="new-mem">
+    <div class="head-tit">
+       <h3>NEW MEMBERS</h3>
+    </div>
+  <!-- first -->
+    <div class="mem-item">
+
+      <div class="mem-img">
+       <img src="img/victoria.jpg" alt="Victoria photo">
+      </div>
+
+      <div class="mem-mail">
+       <p class="mem-name">Victoria Chambers</p>
+        <div>
+         <a href="mailto:victoria.chambers80@example.com">victoria.chambers@example.com</a>
+        </div>
+      </div>
+      <p class="mem-data">02/11/2017</p>
+     </div>
+<!-- second -->
+     <div class="mem-item">
+
+      <div class="mem-img">
+        <img src="img/dale.jpg" alt="Dale photo">
+      </div>
+
+      <div class="mem-mail">
+        <p class="mem-name">Dale Byrd</p>
+        <div>
+          <a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a>
+        </div>
+      </div>
+      <p class="mem-data">02/11/2017</p>
+     </div>
+<!-- third   -->
+     <div class="mem-item">
+
+      <div class="mem-img">
+       <img src="img/dawn.jpg" alt="Dawn photo">
+      </div>
+
+      <div class="mem-mail">
+       <p class="mem-name">Dawn Wood</p>
+        <div>
+          <a href="mailto:dawn.wood16@exmaple.com">dawn.wood16@example.com</a>
+        </div>
+      </div>
+      <p class="mem-data">02/11/2017</p>
+     </div>
+<!-- fourth -->
+     <div class="mem-item non-brd-item">
+
+      <div class="mem-img">
+       <img src="img/dan.jpg" alt="Dan photo">
+      </div>
+
+      <div class="mem-mail">
+        <p class="mem-name">Dan Oliver</p>
+        <div>
+          <a href="mailto:dan.oliver82@exmaple.com">dan.oliver82@example.com</a>
+        </div>
+      </div>
+      <p class="mem-data">02/11/2017</p>
+    </div>
+  </div>
+
+
+
+  <!-- Recent Activity -->
+  <div class="recent-mem">
+
+    <div class="head-tit">
+      <h3>RECENT ACTIVITY</h3>
+    </div>
+  <!-- first -->
+    <div class="mem-item">
+
+      <div class="mem-img recnt-mem-img">
+        <img src="img/victoria.jpg" alt="Victoria photo">
+      </div>
+      <div class="mem-info">
+       <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+       <p>4 hours ago</p>
+      </div>
+      <div class="arrow">
+      </div>
+
+     </div>
+
+      <!-- second -->
+     <div class="mem-item">
+
+        <div class="mem-img recnt-mem-img">
+          <img src="img/dale.jpg" alt="Dale photo">
+        </div>
+        <div class="mem-info">
+          <p>Dale Byrd liked the post Facebook's changes for 2016</p>
+          <p>5 hours ago</p>
+        </div>
+        <div class="arrow">
+        </div>
+
+      </div>
+      <!-- third   -->
+      <div class="mem-item">
+
+        <div class="mem-img recnt-mem-img">
+         <img src="img/dawn.jpg" alt="Dawn photo">
+        </div>
+        <div class="mem-info">
+          <p>Dawn Wood commented on Facebook's changes for 2015</p>
+          <p>5 hours ago</p>
+        </div>
+        <div class="arrow">
+        </div>
+      </div>
+      <!-- fourth -->
+      <div class="mem-item non-brd-item">
+
+        <div class="mem-img recnt-mem-img">
+         <img src="img/dan.jpg" alt="Dan photo">
+        </div>
+        <div class="mem-info">
+          <p>Dan Oliver posted YourApp's SEO Tips</p>
+          <p>1 day ago</p>
+        </div>
+        <div class="arrow">
+        </div>
+       </div>
+
+      </div>
+     </div>
+     <div class="user_submit" id="fourth">
+       <div id="message_user">
+         <form class="form" action="index.html" method="post">
+           <label for="name">MASSAGE USER</label>
+           <input type="text" class="notification-shake" id="name"  name="user_name" placeholder="Search for User" list="datalist1">
+            <datalist id="datalist1">
+              <option value="Kristel"></option>
+              <option value="Alvin"></option>
+              <option value="Myra"></option>
+              <option value="Chelsie"></option>
+              <option value="Lakendra"></option>
+              <option value="Jamie"></option>
+              <option value="Tashia"></option>
+              <option value="Dung"></option>
+            </datalist>
+           <textarea id="user_message" name="massage_for_user" placeholder="Message for User" rows="6" cols="29"></textarea>
+           <button class="button" type="submit" name="button">SEND</button>
+         </form>
+       </div>
+
+       <div id="setting_user">
+         <h4>SETTINGS</h4>
+         <div class="notification-email-setting">
+           <p>Send Email Notifications</p>
+           <div class="switch_setting">
+             <input type="checkbox" name="switch_setting" class="onoffswitch-checkbox" id="emailonoffswitch" checked>
+             <label class="onoffswitch-label" for="emailonoffswitch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+             </label>
+           </div>
+         </div>
+         <div class="notification-profile-setting">
+           <p>Set Profile to Public</p>
+           <div class="switch_setting">
+             <input type="checkbox" name="switch_setting" class="onoffswitch-checkbox" id="profile-onoffswitch" checked>
+             <label class="onoffswitch-label" for="profile-onoffswitch">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+             </label>
+           </div>
+         </div>
+         <div class="select-arrow">
+         </div>
+         <select class="time_zone"  name="user_time_zone">
+           <option value="select-time" selected disabled>Select Timezone</option>
+           <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+           <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+           <option value="-10:00">(GMT -10:00) Hawaii</option>
+           <option value="-09:50">(GMT -9:30) Taiohae</option>
+           <option value="-09:00">(GMT -9:00) Alaska</option>
+           <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+           <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+           <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+           <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+           <option value="-04:50">(GMT -4:30) Caracas</option>
+           <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+           <option value="-03:50">(GMT -3:30) Newfoundland</option>
+           <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+           <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+           <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+           <option value="+00:00">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+           <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+           <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+           <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+           <option value="+03:50">(GMT +3:30) Tehran</option>
+           <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+           <option value="+04:50">(GMT +4:30) Kabul</option>
+           <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+           <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+           <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+           <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+           <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+           <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+           <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+           <option value="+08:75">(GMT +8:45) Eucla</option>
+           <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+           <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+           <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+           <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+           <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+           <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+           <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+           <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+           <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+           <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
+         </select>
+         <div class="submit-button">
+           <button class="button setting-button" id="save_button" type="submit" name="button">SAVE</button>
+           <button class="button setting-button" id="cancel_button" type="submit" name="button">CANCEL</button>
+         </div>
+       </div>
+     </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+   </script>
+   <script src="app.js"></script>
+  </body>
+</html>
