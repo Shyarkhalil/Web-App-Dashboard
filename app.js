@@ -18,9 +18,7 @@ var hourlyChart = new Chart(hourly, {
         datasets: [{
 
             data: [100, 400, 200, 400 ,300 ,600 , 400, 600, 400, 900, 120 ],
-            backgroundColor:
-                'rgba(46, 155, 186, 0.24)',
-
+            backgroundColor:'rgba(46, 155, 186, 0.24)',
             borderWidth: 2,
             borderColor: '#28d2d5',
             tension: 0,
@@ -51,9 +49,7 @@ var dailyChart = new Chart(daily, {
         datasets: [{
 
             data: [2, 40, 16, 70 ,0 ,42 , 100, 150 ],
-            backgroundColor:
-                'rgba(46, 155, 186, 0.24)',
-
+            backgroundColor:'rgba(46, 155, 186, 0.24)',
             borderWidth: 2,
             borderColor: '#28d2d5',
             tension: 0,
@@ -85,17 +81,8 @@ var weeklyChart = new Chart(weeklyy, {
         datasets: [{
 
             data: [2, 40, 16, 70 ,0 ,42 , 100, 150 ],
-            backgroundColor: [
-                'rgba(46, 155, 186, 0.24)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgb(125, 49, 44)'
-            ],
-            borderColor:
-                'rgb(40, 210, 213)',
+            backgroundColor:'rgba(46, 155, 186, 0.24)',
+            borderColor: '#28d2d5',
             borderWidth: 2,
             tension: 0,
             radius: 3
@@ -126,15 +113,7 @@ var monthlyChart = new Chart(monthly, {
         datasets: [{
 
             data: [150, 300, 200, 400 ,300 ,600 , 400, 600, 400, 600, 500, 700],
-            backgroundColor: [
-                'rgba(46, 155, 186, 0.24)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)',
-                'rgb(125, 49, 44)'
-            ],
+            backgroundColor:'rgba(46, 155, 186, 0.24)',
             borderWidth: 2,
             borderColor: '#28d2d5',
             tension: 0,
@@ -295,49 +274,44 @@ let allCanves = document.querySelectorAll(".canvas");
 
 
 window.onload = function () {
-  for (var i = 0; i <allCanves.length; i++) {
-   allCanves[i].style.display = "none";
-   allCanves[0].removeAttribute("style");
-  }
-
   load();
 };
 
+
+allCanves[1].style.display = "none";
+allCanves[2].style.display = "none";
+allCanves[3].style.display = "none";
 
 
 
 
 btnHourly.addEventListener('click', (e) => {
-   for (var i = 0; i < allCanves.length; i++) {
-    allCanves[i].style.display = "none";
-    //allCanves[0].removeAttribute("style");
-    allCanves[0].style.display = "block";
-   }
+  allCanves[1].style.display = "none";
+  allCanves[2].style.display = "none";
+  allCanves[3].style.display = "none";
+  allCanves[0].style.display = "block";
 });
 
 
 dailyButton.addEventListener('click', (e) => {
-   for (var i = 0; i < allCanves.length; i++) {
-    allCanves[i].style.display = "none";
-    //allCanves[1].removeAttribute("style");
-    allCanves[1].style.display = "block";
-   }
+  allCanves[1].style.display = "block";
+  allCanves[0].style.display = "none";
+  allCanves[2].style.display = "none";
+  allCanves[3].style.display = "none";
 });
 
 weeklyButton.addEventListener('click', (e) => {
-   for (var i = 0; i < allCanves.length; i++) {
-    allCanves[i].style.display = "none";
-    //allCanves[2].removeAttribute("style");
-    allCanves[2].style.display = "block";
-   }
+  allCanves[2].style.display = "block";
+  allCanves[0].style.display = "none";
+  allCanves[1].style.display = "none";
+  allCanves[3].style.display = "none";
 });
 
 monthlyBtn.addEventListener('click', (e) => {
-   for (var i = 0; i < allCanves.length; i++) {
-    allCanves[i].style.display = "none";
-    //allCanves[3].removeAttribute("style");
-    allCanves[3].style.display = "block";
-   }
+  allCanves[3].style.display = "block";
+  allCanves[0].style.display = "none";
+  allCanves[1].style.display = "none";
+  allCanves[2].style.display = "none";
 });
 
 

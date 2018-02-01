@@ -659,6 +659,7 @@ button[type="submit"]:hover {
   color:  rgb(10, 177, 42);
   left: 230px;
   top: -9px;
+  cursor: pointer;
 }
 
 .close-error {
