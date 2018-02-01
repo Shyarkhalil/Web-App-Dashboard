@@ -166,6 +166,7 @@ li {
 
 .notifi-title {
   padding-left: 4px;
+  font-size: .76rem;
 }
 
 .notification-menu li .close-notifi {
@@ -236,7 +237,9 @@ li {
 
 
 .nav-buttons  {
-  margin-top: 92px;
+  position: fixed;
+  width: 100%;
+  margin-top: -90px;
   padding: 20px 27px;
   background-color: #2e9bba;
   display: flex;
@@ -244,18 +247,16 @@ li {
   justify-content: space-between;
 }
 
+
+
 .nav-buttons img {
   width: 33px;
 }
 
+.main-div {
+  margin-top: 180px;
+}
 
-/*.dash-icon {
-  padding-left: 10px;
-  margin-left: -10px;
-  border-left: 6px solid #3c9f5e;
-  border-top: 6px solid #2e9bba;
-  border-bottom: 6px solid #2e9bba;
-}*/
 
 /*****************************
        For the larger screen
@@ -666,7 +667,6 @@ button[type="submit"]:hover {
   left: 160px;
   top: -40px;
   cursor: pointer;
-
 }
 
 

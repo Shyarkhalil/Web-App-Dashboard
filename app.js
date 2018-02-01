@@ -278,10 +278,10 @@ plusClose.addEventListener("click", (e) => {
    notiPlusMark.style.display = "none";
 });
 
+
+
 //Alert close
 
-
-//className = "mystyle";
 
 let alertClose = document.querySelector(".alertButton");
 let alertNotification = document.querySelector(".alert");
@@ -310,7 +310,8 @@ window.onload = function () {
 btnHourly.addEventListener('click', (e) => {
    for (var i = 0; i < allCanves.length; i++) {
     allCanves[i].style.display = "none";
-    allCanves[0].removeAttribute("style");
+    //allCanves[0].removeAttribute("style");
+    allCanves[0].style.display = "block";
    }
 });
 
@@ -318,21 +319,24 @@ btnHourly.addEventListener('click', (e) => {
 dailyButton.addEventListener('click', (e) => {
    for (var i = 0; i < allCanves.length; i++) {
     allCanves[i].style.display = "none";
-    allCanves[1].removeAttribute("style");
+    //allCanves[1].removeAttribute("style");
+    allCanves[1].style.display = "block";
    }
 });
 
 weeklyButton.addEventListener('click', (e) => {
    for (var i = 0; i < allCanves.length; i++) {
     allCanves[i].style.display = "none";
-    allCanves[2].removeAttribute("style");
+    //allCanves[2].removeAttribute("style");
+    allCanves[2].style.display = "block";
    }
 });
 
 monthlyBtn.addEventListener('click', (e) => {
    for (var i = 0; i < allCanves.length; i++) {
     allCanves[i].style.display = "none";
-    allCanves[3].removeAttribute("style");
+    //allCanves[3].removeAttribute("style");
+    allCanves[3].style.display = "block";
    }
 });
 
@@ -359,19 +363,19 @@ let dataList = document.querySelectorAll('#datalist1 option');
 
 
 submitButton.addEventListener('click', (e) => {
-  event.preventDefault();
-   let button = event.target;
+     e.preventDefault();
+   let button = e.target;
       if (button) {
       if (userTextArea.value === '') {
         let p = document.createElement("p");
         p.className = "error_title";
         p.textContent = "Oops! You forgot search for name";
         messageErrorMessage.appendChild(p);
-        userErrorContainer.style.display= "inherit";
+        userErrorContainer.style.display= "block";
 
 
       }else if (messageTextArea.value === '') {
-        messageErrorContainer.style.display= "inherit";
+        messageErrorContainer.style.display= "block";
 
       } else {
         let valid = false;
@@ -387,10 +391,12 @@ submitButton.addEventListener('click', (e) => {
           p.className = "error_title";
           p.textContent = "Oops! The name doesn't match";
           messageErrorMessage.appendChild(p);
-          userErrorContainer.style.display= "inherit";
+          userErrorContainer.style.display= "block";
           userTextArea.value = "";
         }else {
-          successContainer.style.display= "inherit";
+          successContainer.style.display= "block";
+          userTextArea.value = "";
+          messageTextArea.value = "";
         }
 
       }
@@ -401,6 +407,8 @@ submitButton.addEventListener('click', (e) => {
 
 successCloseSign.addEventListener('click', (e) => {
   successContainer.style.display = 'none';
+  userTextArea.value = "";
+  messageTextArea.value = "";
 });
 
 closeSign.addEventListener('click', (e) => {
