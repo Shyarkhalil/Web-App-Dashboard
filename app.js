@@ -36,7 +36,6 @@ var hourlyChart = new Chart(hourly, {
           easing: 'easeOutElastic'
         }
     }
-
 });
 
 
